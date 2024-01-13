@@ -1,0 +1,57 @@
+@use "./color.scss";
+@use "./components.scss";
+@use "./code.scss";
+
+// フォント
+@import 'https://cdnjs.cloudflare.com/ajax/libs/hack-font/3.3.0/web/hack.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+
+:root {
+  // シンプルな色変数
+  --cs-color-red: #b60707ad;
+  --cs-color-blue: #3892f2;
+  --cs-color-green: #046004;
+  --cs-color-yellow: #cece27;
+  --cs-color-orange: #ffa600;
+  --cs-color-purple: #9a069a;
+  --cs-color-pink: #fd96a7;
+  --cs-color-light-blue: #00d0ff;
+  --cs-color-light-green: #a4fa7f;
+
+  // テーマカラー
+  --cs-primary-color: #00c8ec;
+  --cs-secondary-color: #fcaf21;
+
+  // 既存のcss変数の変更
+}
+
+// obsidianはbodyでないといけない
+body {
+  // 既存のcss変数の変更
+  // obsidian
+  --font-text-theme: 'Roboto', 'Noto Sans JP';
+  --font-monospace-theme: 'hack';
+  --h1-color: #30e7e7;
+  --h2-color: #3bf357;
+  --h3-color: #d2fb79;
+  --h4-color: #dbc503;
+}
+
+strong, .cm-strong {
+  font-weight: 900;
+  color: var(--cs-primary-color);
+}
+
+em, .cm-em {
+  font-family: 'Playfair Display';
+}
+
+// fontのチェック
+.font-check {
+  font-family: var(--font-text-theme);
+  code {
+    font-family: var(--font-monospace-theme);
+  }
+}

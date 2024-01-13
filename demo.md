@@ -1,0 +1,58 @@
+# ノートブックのデモ
+
+<div class="info">
+  <div class="caption">INFO</div>
+  情報の内容
+</div>
+
+<div class="warn">
+  <div class="caption">WARN</div>
+  警告の内容
+</div>
+
+<div class="theorem">
+  <div class="caption">HOGE HOGE の定理</div>
+  定理の内容
+</div>
+
+通常の文章．**強調された文章**．*斜体*, ~~訂正された文章~~
+
+<span class="blue">色付き文章，<strong>色付きの強調</strong>, <em>色付きの斜体</em>, <del>色付きの訂正</del> </span>
+
+- 箇条書き
+- 箇条書き
+  - ネストした箇条書き
+  - ネストした箇条書き
+
+1. 番号付き箇条書き
+1. 番号付き箇条書き
+    1. ネストした箇条書き
+    1. ネストした箇条書き
+
+# Heading 1
+
+## heading 1-1
+
+## heading 1-2
+
+### heading 1-2-1
+
+#### heading 1-2-1-1
+
+#### heading 1-2-1-2
+
+### heading 1-2-2
+
+以下はフォントのチェック
+
+<div class="font-check">
+  
+  通常の文章．**強調された文章**．*斜体*, ~~訂正された文章~~
+
+<span class="blue">色付き文章，<strong>色付きの強調</strong>, <em>色付きの斜体</em>, <del>色付きの訂正</del> </span>
+
+```rust
+println!("hello world!");
+```
+
+</div>

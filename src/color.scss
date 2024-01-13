@@ -1,0 +1,19 @@
+// 色関係のクラスを定義
+
+@use 'sass:list';
+
+$color-list: "red", "blue", "green", "yellow", "orange", "purple", "pink", "light-blue", "light-green"; // --color-* 変数に対応
+// $color-list: "red", "blue";
+
+@for $i from 1 through list.length($color-list) {
+    .#{list.nth($color-list, $i)} {
+        color: var(--cs-color-#{list.nth($color-list, $i)});
+    }
+}
+
+// 色付きの時のスタイル
+.red, .blue, .green, .yellow, .orange, .purple, .pink, .light-blue, .light-green {
+    strong, .cm-strong {
+        color: var(--cs-secondary-color);
+    }
+}

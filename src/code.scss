@@ -1,0 +1,63 @@
+:root {
+  --cs-prism-background: #0c3a68;
+  --cs-prism-color: #f8f8f2;
+
+  --cs-prism-color-comment: #6a9955;
+  --cs-prism-color-prolog: #6a9955;
+  --cs-prism-color-doctype: #569CD6;
+  --cs-prism-color-cdata: #808080;
+
+  --cs-prism-color-punctuation: #d4d4d4;
+  --cs-prism-color-namespace: rgba(248, 248, 242, 0.7);
+
+  --cs-prism-color-property: #f92672;
+  --cs-prism-color-tag: #f92672;
+  --cs-prism-color-constant: #f92672;
+  --cs-prism-color-symbol: #f92672;
+  --cs-prism-color-deleted: #f92672;
+
+  --cs-prism-color-boolean: #ae81ff;
+  --cs-prism-color-number: #ae81ff;
+
+  --cs-prism-color-selector: #a6e22e;
+  --cs-prism-color-attr-name: #a6e22e;
+  --cs-prism-color-string: #a6e22e;
+  --cs-prism-color-char: #a6e22e;
+  --cs-prism-color-builtin: #a6e22e;
+  --cs-prism-color-inserted: #a6e22e;
+
+  --cs-prism-color-entity: #f8f8f2;
+  --cs-prism-color-url: #f8f8f2;
+  --cs-prism-color-variable: #f8f8f2;
+  --cs-prism-color-attr-value: #f8f8f2;
+
+  --cs-prism-color-atrule: #e6db74;
+  --cs-prism-color-class-name: #e6db74;
+
+  --cs-prism-color-function: #96f4fe;
+
+  --cs-prism-color-keyword: #ff9b3d;
+  --cs-prism-color-operator: #ff9b3d;
+
+  --cs-prism-color-regex: #fd971f;
+  --cs-prism-color-important: #fd971f;
+}
+
+// obsidian
+// obsidianではbodyでないと反映されない．
+body {
+  // css変数の変更
+  // obsidian
+  --code-background: var(--cs-prism-background);
+  --code-normal: var(--cs-prism-color);
+  --code-comment: var(--cs-prism-color-comment);
+  --code-function: var(--cs-prism-color-function);
+  --code-important: var(--cs-prism-color-important);
+  --code-keyword: var(--cs-prism-color-keyword);
+  --code-operator: var(--cs-prism-color-operator);
+  --code-property: var(--cs-prism-color-property);
+  --code-punctuation: var(--cs-prism-color-punctuation);
+  --code-string: var(--cs-prism-color-string);
+  --code-tag: var(--cs-prism-color-tag);
+  --code-value: var(--cs-prism-color-number);
+}
