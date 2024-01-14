@@ -5,15 +5,28 @@
 $color-list: "red", "blue", "green", "yellow", "orange", "purple", "pink", "light-blue", "light-green"; // --color-* 変数に対応
 // $color-list: "red", "blue";
 
+// colorについて
 @for $i from 1 through list.length($color-list) {
     .#{list.nth($color-list, $i)} {
         color: var(--cs-color-#{list.nth($color-list, $i)});
+
+        strong, .cm-strong {
+            color: var(--cs-secondary-color);
+        }
     }
 }
 
-// 色付きの時のスタイル
-.red, .blue, .green, .yellow, .orange, .purple, .pink, .light-blue, .light-green {
-    strong, .cm-strong {
-        color: var(--cs-secondary-color);
+// bg-colorについて
+@for $i from 1 through list.length($color-list) {
+    .bg-#{list.nth($color-list, $i)} {
+        background-color: rgba(var(--cs-color-#{list.nth($color-list, $i)}-rgb), 0.8);
+    }
+}
+
+// text-decoration-colorについて
+@for $i from 1 through list.length($color-list) {
+    .text-line-#{list.nth($color-list, $i)} {
+        -webkit-text-decoration-color: var(--cs-color-#{list.nth($color-list, $i)});
+                text-decoration-color: var(--cs-color-#{list.nth($color-list, $i)});
     }
 }

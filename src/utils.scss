@@ -1,0 +1,42 @@
+
+// 便利なクラス
+
+// 相対的なサイズの変更
+.font-xlarge {
+  font-size: 1.5em;
+}
+.font-large {
+  font-size: 1.2em;
+}
+.font-small {
+  font-size: 0.8em;
+}
+.font-xsmall {
+  font-size: 0.6em;
+}
+
+// 下線関連
+.under-line {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+.text-line-solid {
+  -webkit-text-decoration-style: solid;
+          text-decoration-style: solid;
+}
+.text-line-dotted {
+  -webkit-text-decoration-style: dotted;
+          text-decoration-style: dotted;
+}
+.text-line-double {
+  -webkit-text-decoration-style: double;
+          text-decoration-style: double;
+}
+.text-line-dashed {
+  -webkit-text-decoration-style: dashed;
+          text-decoration-style: dashed;
+}
+.text-line-wavy {
+  -webkit-text-decoration-style: wavy;
+          text-decoration-style: wavy;
+}

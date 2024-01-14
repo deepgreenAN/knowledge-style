@@ -1,6 +1,7 @@
 @use "./color.scss";
 @use "./components.scss";
 @use "./code.scss";
+@use "./utils.scss";
 
 // フォント
 @import 'https://cdnjs.cloudflare.com/ajax/libs/hack-font/3.3.0/web/hack.min.css';
@@ -10,19 +11,30 @@
 
 :root {
   // シンプルな色変数
-  --cs-color-red: #b60707ad;
+  --cs-color-red: #b60707;
+  --cs-color-red-rgb: 182, 7, 7;
   --cs-color-blue: #3892f2;
+  --cs-color-blue-rgb: 56, 146, 242;
   --cs-color-green: #046004;
+  --cs-color-green-rgb: 4, 96, 4;
   --cs-color-yellow: #cece27;
+  --cs-color-yellow-rgb: 206, 206, 39;
   --cs-color-orange: #ffa600;
+  --cs-color-orange-rgb: 255, 166, 0;
   --cs-color-purple: #9a069a;
+  --cs-color-purple-rgb: 154, 6, 154;
   --cs-color-pink: #fd96a7;
+  --cs-color-pink-rgb: 253, 150, 167;
   --cs-color-light-blue: #00d0ff;
+  --cs-color-light-blue-rgb: 0, 208, 255;
   --cs-color-light-green: #a4fa7f;
+  --cs-color-light-green-rgb: 164, 250, 127;
 
   // テーマカラー
   --cs-primary-color: #00c8ec;
+  --cs-primary-color-rgb: 0, 200, 236;
   --cs-secondary-color: #fcaf21;
+  --cs-secondary-color-rgb: 252, 175, 33;
 
   // 既存のcss変数の変更
 }
@@ -37,6 +49,19 @@ body {
   --h2-color: #3bf357;
   --h3-color: #d2fb79;
   --h4-color: #dbc503;
+}
+
+// obsidian側の詳細度を無視するため，詳細度をfakeのid否定で底上げする．
+:not(#fake) {
+  h2, h3, h4, h5, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5 {
+    padding-top: 0.4em;
+    padding-bottom: 0.2em;
+
+    // 内容が無くそのまま連続する場合
+    & + :is(h2, h3, h4, h5, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5) {
+      padding-top: 0;
+    }
+  }
 }
 
 strong, .cm-strong {

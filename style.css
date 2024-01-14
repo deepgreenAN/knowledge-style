@@ -5,41 +5,145 @@
 .red {
   color: var(--cs-color-red);
 }
+.red strong, .red .cm-strong {
+  color: var(--cs-secondary-color);
+}
 
 .blue {
   color: var(--cs-color-blue);
+}
+.blue strong, .blue .cm-strong {
+  color: var(--cs-secondary-color);
 }
 
 .green {
   color: var(--cs-color-green);
 }
+.green strong, .green .cm-strong {
+  color: var(--cs-secondary-color);
+}
 
 .yellow {
   color: var(--cs-color-yellow);
+}
+.yellow strong, .yellow .cm-strong {
+  color: var(--cs-secondary-color);
 }
 
 .orange {
   color: var(--cs-color-orange);
 }
+.orange strong, .orange .cm-strong {
+  color: var(--cs-secondary-color);
+}
 
 .purple {
   color: var(--cs-color-purple);
+}
+.purple strong, .purple .cm-strong {
+  color: var(--cs-secondary-color);
 }
 
 .pink {
   color: var(--cs-color-pink);
 }
+.pink strong, .pink .cm-strong {
+  color: var(--cs-secondary-color);
+}
 
 .light-blue {
   color: var(--cs-color-light-blue);
+}
+.light-blue strong, .light-blue .cm-strong {
+  color: var(--cs-secondary-color);
 }
 
 .light-green {
   color: var(--cs-color-light-green);
 }
-
-.red strong, .red .cm-strong, .blue strong, .blue .cm-strong, .green strong, .green .cm-strong, .yellow strong, .yellow .cm-strong, .orange strong, .orange .cm-strong, .purple strong, .purple .cm-strong, .pink strong, .pink .cm-strong, .light-blue strong, .light-blue .cm-strong, .light-green strong, .light-green .cm-strong {
+.light-green strong, .light-green .cm-strong {
   color: var(--cs-secondary-color);
+}
+
+.bg-red {
+  background-color: rgba(var(--cs-color-red-rgb), 0.8);
+}
+
+.bg-blue {
+  background-color: rgba(var(--cs-color-blue-rgb), 0.8);
+}
+
+.bg-green {
+  background-color: rgba(var(--cs-color-green-rgb), 0.8);
+}
+
+.bg-yellow {
+  background-color: rgba(var(--cs-color-yellow-rgb), 0.8);
+}
+
+.bg-orange {
+  background-color: rgba(var(--cs-color-orange-rgb), 0.8);
+}
+
+.bg-purple {
+  background-color: rgba(var(--cs-color-purple-rgb), 0.8);
+}
+
+.bg-pink {
+  background-color: rgba(var(--cs-color-pink-rgb), 0.8);
+}
+
+.bg-light-blue {
+  background-color: rgba(var(--cs-color-light-blue-rgb), 0.8);
+}
+
+.bg-light-green {
+  background-color: rgba(var(--cs-color-light-green-rgb), 0.8);
+}
+
+.text-line-red {
+  -webkit-text-decoration-color: var(--cs-color-red);
+  text-decoration-color: var(--cs-color-red);
+}
+
+.text-line-blue {
+  -webkit-text-decoration-color: var(--cs-color-blue);
+  text-decoration-color: var(--cs-color-blue);
+}
+
+.text-line-green {
+  -webkit-text-decoration-color: var(--cs-color-green);
+  text-decoration-color: var(--cs-color-green);
+}
+
+.text-line-yellow {
+  -webkit-text-decoration-color: var(--cs-color-yellow);
+  text-decoration-color: var(--cs-color-yellow);
+}
+
+.text-line-orange {
+  -webkit-text-decoration-color: var(--cs-color-orange);
+  text-decoration-color: var(--cs-color-orange);
+}
+
+.text-line-purple {
+  -webkit-text-decoration-color: var(--cs-color-purple);
+  text-decoration-color: var(--cs-color-purple);
+}
+
+.text-line-pink {
+  -webkit-text-decoration-color: var(--cs-color-pink);
+  text-decoration-color: var(--cs-color-pink);
+}
+
+.text-line-light-blue {
+  -webkit-text-decoration-color: var(--cs-color-light-blue);
+  text-decoration-color: var(--cs-color-light-blue);
+}
+
+.text-line-light-green {
+  -webkit-text-decoration-color: var(--cs-color-light-green);
+  text-decoration-color: var(--cs-color-light-green);
 }
 
 .info, .warn, .theorem {
@@ -139,18 +243,75 @@ body {
   --code-value: var(--cs-prism-color-number);
 }
 
+.font-xlarge {
+  font-size: 1.5em;
+}
+
+.font-large {
+  font-size: 1.2em;
+}
+
+.font-small {
+  font-size: 0.8em;
+}
+
+.font-xsmall {
+  font-size: 0.6em;
+}
+
+.under-line {
+  -webkit-text-decoration-line: underline;
+  text-decoration-line: underline;
+}
+
+.text-line-solid {
+  -webkit-text-decoration-style: solid;
+  text-decoration-style: solid;
+}
+
+.text-line-dotted {
+  -webkit-text-decoration-style: dotted;
+  text-decoration-style: dotted;
+}
+
+.text-line-double {
+  -webkit-text-decoration-style: double;
+  text-decoration-style: double;
+}
+
+.text-line-dashed {
+  -webkit-text-decoration-style: dashed;
+  text-decoration-style: dashed;
+}
+
+.text-line-wavy {
+  -webkit-text-decoration-style: wavy;
+  text-decoration-style: wavy;
+}
+
 :root {
-  --cs-color-red: #b60707ad;
+  --cs-color-red: #b60707;
+  --cs-color-red-rgb: 182, 7, 7;
   --cs-color-blue: #3892f2;
+  --cs-color-blue-rgb: 56, 146, 242;
   --cs-color-green: #046004;
+  --cs-color-green-rgb: 4, 96, 4;
   --cs-color-yellow: #cece27;
+  --cs-color-yellow-rgb: 206, 206, 39;
   --cs-color-orange: #ffa600;
+  --cs-color-orange-rgb: 255, 166, 0;
   --cs-color-purple: #9a069a;
+  --cs-color-purple-rgb: 154, 6, 154;
   --cs-color-pink: #fd96a7;
+  --cs-color-pink-rgb: 253, 150, 167;
   --cs-color-light-blue: #00d0ff;
+  --cs-color-light-blue-rgb: 0, 208, 255;
   --cs-color-light-green: #a4fa7f;
+  --cs-color-light-green-rgb: 164, 250, 127;
   --cs-primary-color: #00c8ec;
+  --cs-primary-color-rgb: 0, 200, 236;
   --cs-secondary-color: #fcaf21;
+  --cs-secondary-color-rgb: 252, 175, 33;
 }
 
 body {
@@ -160,6 +321,14 @@ body {
   --h2-color: #3bf357;
   --h3-color: #d2fb79;
   --h4-color: #dbc503;
+}
+
+:not(#fake) h2, :not(#fake) h3, :not(#fake) h4, :not(#fake) h5, :not(#fake) .HyperMD-header-2, :not(#fake) .HyperMD-header-3, :not(#fake) .HyperMD-header-4, :not(#fake) .HyperMD-header-5 {
+  padding-top: 0.4em;
+  padding-bottom: 0.2em;
+}
+:not(#fake) h2 + :is(h2, h3, h4, h5, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5), :not(#fake) h3 + :is(h2, h3, h4, h5, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5), :not(#fake) h4 + :is(h2, h3, h4, h5, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5), :not(#fake) h5 + :is(h2, h3, h4, h5, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5), :not(#fake) .HyperMD-header-2 + :is(h2, h3, h4, h5, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5), :not(#fake) .HyperMD-header-3 + :is(h2, h3, h4, h5, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5), :not(#fake) .HyperMD-header-4 + :is(h2, h3, h4, h5, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5), :not(#fake) .HyperMD-header-5 + :is(h2, h3, h4, h5, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5) {
+  padding-top: 0;
 }
 
 strong, .cm-strong {
