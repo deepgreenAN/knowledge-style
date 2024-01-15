@@ -7,22 +7,23 @@
 @import 'https://cdnjs.cloudflare.com/ajax/libs/hack-font/3.3.0/web/hack.min.css';
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
 
 :root {
   // シンプルな色変数
-  --cs-color-red: #b60707;
-  --cs-color-red-rgb: 182, 7, 7;
+  --cs-color-red: #f55555;
+  --cs-color-red-rgb: 245, 85, 85;
   --cs-color-blue: #3892f2;
   --cs-color-blue-rgb: 56, 146, 242;
-  --cs-color-green: #046004;
-  --cs-color-green-rgb: 4, 96, 4;
+  --cs-color-green: #06a306;
+  --cs-color-green-rgb: 6, 163, 6;
   --cs-color-yellow: #cece27;
   --cs-color-yellow-rgb: 206, 206, 39;
   --cs-color-orange: #ffa600;
   --cs-color-orange-rgb: 255, 166, 0;
-  --cs-color-purple: #9a069a;
-  --cs-color-purple-rgb: 154, 6, 154;
+  --cs-color-purple: #c056f4;
+  --cs-color-purple-rgb: 192, 86, 244;
   --cs-color-pink: #fd96a7;
   --cs-color-pink-rgb: 253, 150, 167;
   --cs-color-light-blue: #00d0ff;
@@ -70,7 +71,7 @@ strong, .cm-strong {
 }
 
 em, .cm-em {
-  font-family: 'Playfair Display';
+  font-family: 'Playfair Display', 'Noto Serif JP';
 }
 
 // fontのチェック
