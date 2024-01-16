@@ -1,0 +1,56 @@
+// 縦二段組みのレイアウト
+.layout-col-2 {
+  // それぞれのwidth
+  --left-width: 1fr;
+  --right-width: 1fr;
+  --gap: 0;
+
+  display: grid;
+  grid-template-columns: var(--left-width) var(--right-width);
+  grid-auto-flow: row;
+  row-gap: var(--gap);
+}
+
+// 縦3段組みのレイアウト
+.layout-col-3 {
+  // それぞれのwidth
+  --left-width: 1fr;
+  --center-width: 1fr;
+  --right-width: 1fr;
+  --gap: 0;
+
+  display: grid;
+  grid-template-columns: var(--left-width) var(--center-width) var(--right-width);
+  grid-auto-flow: row;
+  row-gap: var(--gap);
+}
+
+// 段組みリスト
+@mixin list-col-n($n) {
+  .list-col-#{$n} {
+    // 中のulを中央にする．
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    // 行間のgap
+    --row-gap: 0em;
+    // 行数を表すcss変数
+    --row-number: 8;
+
+    ul {
+      width: 100%;
+
+      display: grid;
+      grid-template-columns: repeat($n, 1fr);
+      grid-template-rows: repeat(var(--row-number), auto);
+      grid-auto-flow: column;
+      row-gap: var(--row-gap);
+    }
+  }
+}
+
+// 二段組リスト
+@include list-col-n(2);
+// 三段組みリスト
+@include list-col-n(3);

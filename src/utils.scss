@@ -20,23 +20,9 @@
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
 }
-.text-line-solid {
-  -webkit-text-decoration-style: solid;
-          text-decoration-style: solid;
+
+// 枠線関連
+.border {
+  border-style: solid;
 }
-.text-line-dotted {
-  -webkit-text-decoration-style: dotted;
-          text-decoration-style: dotted;
-}
-.text-line-double {
-  -webkit-text-decoration-style: double;
-          text-decoration-style: double;
-}
-.text-line-dashed {
-  -webkit-text-decoration-style: dashed;
-          text-decoration-style: dashed;
-}
-.text-line-wavy {
-  -webkit-text-decoration-style: wavy;
-          text-decoration-style: wavy;
-}
+

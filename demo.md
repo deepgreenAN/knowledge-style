@@ -25,9 +25,18 @@
 背景色付き文章，<strong>背景色付きの強調</strong>, <em>背景色付きの斜体</em>, <del>背景色付きの訂正</del>
 </span>
 
-<span class="under-line text-line-dotted text-line-red">
+<span class="under-line text-decoration-red" style="text-decoration-style: dotted;">
 下線付き文章，<strong>下線色付きの強調</strong>, <em>下線色付きの斜体</em>, <del>下線色付きの訂正</del>
 </span>
+
+<div class="border border-yellow" style="border-radius: 10px;">
+
+枠付きの要素
+
+- a
+- b
+
+</div>
 
 - 箇条書き
 - 箇条書き
@@ -63,5 +72,38 @@
 ```rust
 println!("hello world!");
 ```
+
+</div>
+
+以下はレイアウト
+
+二段組み
+<div class="layout-col-2" style="--left-width: 30%;">
+<div>
+
+- a
+- b
+
+</div>
+<div style="color: red;">
+
+1. c
+1. d
+
+</div>
+</div>
+
+<div>
+二段組リスト
+</div>
+<div class="list-col-2 border" style="--row-number: 4;">
+
+- a
+- b
+- c
+- d
+- e
+- f
+- g
 
 </div>

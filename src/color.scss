@@ -25,8 +25,15 @@ $color-list: "red", "blue", "green", "yellow", "orange", "purple", "pink", "ligh
 
 // text-decoration-colorについて
 @for $i from 1 through list.length($color-list) {
-    .text-line-#{list.nth($color-list, $i)} {
+    .text-decoration-#{list.nth($color-list, $i)} {
         -webkit-text-decoration-color: var(--cs-color-#{list.nth($color-list, $i)});
                 text-decoration-color: var(--cs-color-#{list.nth($color-list, $i)});
+    }
+}
+
+// border-colorについて
+@for $i from 1 through list.length($color-list) {
+    .border-#{list.nth($color-list, $i)} {
+        border-color:  var(--cs-color-#{list.nth($color-list, $i)});
     }
 }
