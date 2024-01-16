@@ -94,9 +94,24 @@ println!("hello world!");
 </div>
 
 <div>
-二段組リスト
+縦二段組リスト
 </div>
 <div class="list-col-2 border" style="--row-number: 4;">
+
+- a
+- b
+- c
+- d
+- e
+- f
+- g
+
+</div>
+
+<div>
+横二段組リスト
+</div>
+<div class="list-row-2 border" style="--column-number: 4;">
 
 - a
 - b
