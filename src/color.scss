@@ -34,6 +34,7 @@ $color-list: "red", "blue", "green", "yellow", "orange", "purple", "pink", "ligh
 // border-colorについて
 @for $i from 1 through list.length($color-list) {
     .border-#{list.nth($color-list, $i)} {
+        border-style: solid;
         border-color:  var(--cs-color-#{list.nth($color-list, $i)});
     }
 }

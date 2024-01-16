@@ -24,11 +24,13 @@
 // 枠線関連
 .border {
   border-style: solid;
+  border-radius: 5px;
 }
 
-// 縦段組みリスト
-@mixin list-col-n($n) {
-  .list-col-#{$n} {
+// 縦n段組みリスト
+@mixin list-col-n($n) { // n: 列数
+  // 列方向・行方向フローの共通部分
+  .list-col-#{$n}-col, .list-col-#{$n}-row {
     // 中のulを中央にする．
     display: flex;
     justify-content: center;
@@ -36,33 +38,50 @@
 
     // 行間のgap
     --row-gap: 0em;
-    // 行数を表すcss変数
-    --row-number: 8;
-
+    
     ul {
+      padding-left: 1.2em;
+      margin-top: 0;
+      margin-bottom: 0;
       width: 100%;
 
       display: grid;
       grid-template-columns: repeat($n, 1fr);
-      grid-template-rows: repeat(var(--row-number), auto);
-      grid-auto-flow: column;
       row-gap: var(--row-gap);
 
       li {
-        width: calc(100% - 1em); // マーカーサイズ分引く
+        max-width: calc(100% - 1em); // マーカーサイズ分引く
       }
     }
   }
+
+  // 縦n段組みリスト(列方向フロー)
+  .list-col-#{$n}-col {
+    // 行数を表すcss変数
+    --row-number: 8;
+
+    ul {
+      grid-template-rows: repeat(var(--row-number), auto);
+      grid-auto-flow: column;
+    }
+  }
+
+  // 縦n段組みリスト(行方向フロー)
+  .list-col-#{$n}-row ul{
+    grid-auto-rows: auto;
+    grid-auto-flow: row;
+  }
+}
+
+@for $i from 2 through 6 {
+  @include list-col-n($i);
 }
 
 
-@include list-col-n(2); // 縦二段組リスト
-@include list-col-n(3); // 縦三段組みリスト
-@include list-col-n(4); // 縦四段組みリスト
-
-// 横段組リスト
+// 横n段組リスト
 @mixin list-row-n($n) {
-  .list-row-#{$n} {
+  // 行方向と列方向フローで共通部分
+  .list-row-#{$n}-row, .list-row-#{$n}-col {
     // 中のulを中央にする．
     display: flex;
     justify-content: center;
@@ -70,25 +89,42 @@
 
     // 列間のgap
     --column-gap: 0em;
+
+    ul {
+      padding-left: 1.2em;
+      margin-top: 0;
+      margin-bottom: 0;
+      width: 100%;
+
+      display: grid;
+      grid-template-rows: repeat($n, auto);
+      row-gap: var(--column-gap);
+
+      li {
+        max-width: calc(100% - 1em); // マーカーサイズ分引く
+      }
+    }
+  }
+
+  // 横n段組リスト(行方向フロー)
+  .list-row-#{$n}-row {
     // 列数を表すcss変数
     --column-number: 4;
 
     ul {
-      width: 100%;
-
-      display: grid;
       grid-template-columns: repeat(var(--column-number), 1fr);
-      grid-template-rows: repeat($n, auto);
       grid-auto-flow: row;
-      row-gap: var(--column-gap);
-
-      li {
-        width: calc(100% - 1em); // マーカーサイズ分引く
-      }
     }
+  }
+  
+  // 横n段組リスト(列方向フロー)
+  .list-row-#{$n}-col ul{
+    grid-auto-columns: auto;
+    grid-auto-flow: column;
   }
 }
 
-@include list-row-n(2); // 横二段組リスト
-@include list-row-n(3); // 横三段組みリスト
-@include list-col-n(4); // 横四段組リスト
+@for $i from 2 through 10 {
+  @include list-row-n($i);
+} 
+

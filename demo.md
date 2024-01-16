@@ -29,7 +29,7 @@
 下線付き文章，<strong>下線色付きの強調</strong>, <em>下線色付きの斜体</em>, <del>下線色付きの訂正</del>
 </span>
 
-<div class="border border-yellow" style="border-radius: 10px;">
+<div class="border-yellow" style="border-radius: 10px;">
 
 枠付きの要素
 
@@ -94,11 +94,12 @@ println!("hello world!");
 </div>
 
 <div>
-縦二段組リスト
+縦二段組リスト(列方向フロー)
 </div>
-<div class="list-col-2 border" style="--row-number: 4;">
+<div class="list-col-2-col border" style="--row-number: 4;">
 
 - あああああああああああああああああ
+- b
 - c
 - d
 - e
@@ -108,9 +109,39 @@ println!("hello world!");
 </div>
 
 <div>
-横二段組リスト
+縦二段組リスト(行方向フロー)
 </div>
-<div class="list-row-2 border" style="--column-number: 4;">
+<div class="list-col-2-row border">
+
+- あああああああああああああああああ
+- b
+- c
+- d
+- e
+- f
+- g
+
+</div>
+
+<div>
+横二段組リスト(行方向フロー)
+</div>
+<div class="list-row-2-row border" style="--column-number: 4;">
+
+- ああああああああ
+- b
+- c
+- d
+- e
+- f
+- g
+
+</div>
+
+<div>
+横二段組リスト(列方向フロー) *列数を指定しないため，widthを固定できない．
+</div>
+<div class="list-row-2-col border" >
 
 - ああああああああ
 - b
