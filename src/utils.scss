@@ -26,3 +26,69 @@
   border-style: solid;
 }
 
+// 縦段組みリスト
+@mixin list-col-n($n) {
+  .list-col-#{$n} {
+    // 中のulを中央にする．
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    // 行間のgap
+    --row-gap: 0em;
+    // 行数を表すcss変数
+    --row-number: 8;
+
+    ul {
+      width: 100%;
+
+      display: grid;
+      grid-template-columns: repeat($n, 1fr);
+      grid-template-rows: repeat(var(--row-number), auto);
+      grid-auto-flow: column;
+      row-gap: var(--row-gap);
+
+      li {
+        width: calc(100% - 1em); // マーカーサイズ分引く
+      }
+    }
+  }
+}
+
+
+@include list-col-n(2); // 縦二段組リスト
+@include list-col-n(3); // 縦三段組みリスト
+@include list-col-n(4); // 縦四段組みリスト
+
+// 横段組リスト
+@mixin list-row-n($n) {
+  .list-row-#{$n} {
+    // 中のulを中央にする．
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    // 列間のgap
+    --column-gap: 0em;
+    // 列数を表すcss変数
+    --column-number: 4;
+
+    ul {
+      width: 100%;
+
+      display: grid;
+      grid-template-columns: repeat(var(--column-number), 1fr);
+      grid-template-rows: repeat($n, auto);
+      grid-auto-flow: row;
+      row-gap: var(--column-gap);
+
+      li {
+        width: calc(100% - 1em); // マーカーサイズ分引く
+      }
+    }
+  }
+}
+
+@include list-row-n(2); // 横二段組リスト
+@include list-row-n(3); // 横三段組みリスト
+@include list-col-n(4); // 横四段組リスト

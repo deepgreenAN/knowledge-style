@@ -98,8 +98,7 @@ println!("hello world!");
 </div>
 <div class="list-col-2 border" style="--row-number: 4;">
 
-- a
-- b
+- あああああああああああああああああ
 - c
 - d
 - e
@@ -113,7 +112,7 @@ println!("hello world!");
 </div>
 <div class="list-row-2 border" style="--column-number: 4;">
 
-- a
+- ああああああああ
 - b
 - c
 - d
