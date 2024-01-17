@@ -1,7 +1,7 @@
 # ノートブックのデモ
 
-<div class="info">
-  <div class="caption">INFO</div>
+<div class="info" style="--caption-font-size: 1em;">
+  <div class="caption font-small">INFO</div>
   情報の内容
 </div>
 
