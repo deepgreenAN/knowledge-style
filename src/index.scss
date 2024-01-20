@@ -59,10 +59,20 @@ body {
 
 // obsidian側の詳細度を無視するため，詳細度をfakeのid否定で底上げする．
 :not(#fake) {
-  h2, h3, h4, h5, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5 {
-    padding-top: 0.4em;
-    padding-bottom: 0.2em;
+  h1, h2, .HyperMD-header-1,.HyperMD-header-2 {
+    padding-top: 1rem;
+    padding-bottom: 0.4rem;
+  }
+  h3, .HyperMD-header-3 {
+    padding-top: 0.8rem;
+    padding-bottom: 0.4rem;
+  }
+  h4, h5, .HyperMD-header-4, .HyperMD-header-5 {
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+  }
 
+  h2, h3, h4, h5, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5 {
     // 内容が無くそのまま連続する場合
     & + :is(h2, h3, h4, h5, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5) {
       padding-top: 0;

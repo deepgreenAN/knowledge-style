@@ -1,7 +1,7 @@
 # ノートブックのデモ
 
 <div class="info" style="--caption-font-size: 1em;">
-  <div class="caption font-small">INFO</div>
+  <div class="caption">INFO</div>
   情報の内容
 </div>
 
@@ -49,11 +49,21 @@
     1. ネストした箇条書き
     1. ネストした箇条書き
 
+内容がある
+
 # Heading 1
+
+内容がある
+
+# Heading 2
 
 ## heading 1-1
 
+内容がある
+
 ## heading 1-2
+
+内容がある
 
 ### heading 1-2-1
 

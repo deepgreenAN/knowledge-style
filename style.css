@@ -823,9 +823,17 @@ body {
   --h4-color: #dbc503;
 }
 
-:not(#fake) h2, :not(#fake) h3, :not(#fake) h4, :not(#fake) h5, :not(#fake) .HyperMD-header-2, :not(#fake) .HyperMD-header-3, :not(#fake) .HyperMD-header-4, :not(#fake) .HyperMD-header-5 {
-  padding-top: 0.4em;
-  padding-bottom: 0.2em;
+:not(#fake) h1, :not(#fake) h2, :not(#fake) .HyperMD-header-1, :not(#fake) .HyperMD-header-2 {
+  padding-top: 1rem;
+  padding-bottom: 0.4rem;
+}
+:not(#fake) h3, :not(#fake) .HyperMD-header-3 {
+  padding-top: 0.8rem;
+  padding-bottom: 0.4rem;
+}
+:not(#fake) h4, :not(#fake) h5, :not(#fake) .HyperMD-header-4, :not(#fake) .HyperMD-header-5 {
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
 }
 :not(#fake) h2 + :is(h2, h3, h4, h5, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5), :not(#fake) h3 + :is(h2, h3, h4, h5, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5), :not(#fake) h4 + :is(h2, h3, h4, h5, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5), :not(#fake) h5 + :is(h2, h3, h4, h5, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5), :not(#fake) .HyperMD-header-2 + :is(h2, h3, h4, h5, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5), :not(#fake) .HyperMD-header-3 + :is(h2, h3, h4, h5, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5), :not(#fake) .HyperMD-header-4 + :is(h2, h3, h4, h5, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5), :not(#fake) .HyperMD-header-5 + :is(h2, h3, h4, h5, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5) {
   padding-top: 0;
