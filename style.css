@@ -821,6 +821,8 @@ body {
   --h2-color: #3bf357;
   --h3-color: #d2fb79;
   --h4-color: #dbc503;
+  --h5-color: #984705;
+  --h6-color: #8f8f8f;
 }
 
 :not(#fake) h1, :not(#fake) h2, :not(#fake) .HyperMD-header-1, :not(#fake) .HyperMD-header-2 {
@@ -835,7 +837,7 @@ body {
   padding-top: 0.4rem;
   padding-bottom: 0.4rem;
 }
-:not(#fake) h2 + :is(h2, h3, h4, h5, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5), :not(#fake) h3 + :is(h2, h3, h4, h5, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5), :not(#fake) h4 + :is(h2, h3, h4, h5, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5), :not(#fake) h5 + :is(h2, h3, h4, h5, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5), :not(#fake) .HyperMD-header-2 + :is(h2, h3, h4, h5, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5), :not(#fake) .HyperMD-header-3 + :is(h2, h3, h4, h5, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5), :not(#fake) .HyperMD-header-4 + :is(h2, h3, h4, h5, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5), :not(#fake) .HyperMD-header-5 + :is(h2, h3, h4, h5, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5) {
+:not(#fake) h2 + :is(h2, h3, h4, h5, h6, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5, .HyperMD-header-6), :not(#fake) h3 + :is(h2, h3, h4, h5, h6, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5, .HyperMD-header-6), :not(#fake) h4 + :is(h2, h3, h4, h5, h6, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5, .HyperMD-header-6), :not(#fake) h5 + :is(h2, h3, h4, h5, h6, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5, .HyperMD-header-6), :not(#fake) h6 + :is(h2, h3, h4, h5, h6, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5, .HyperMD-header-6), :not(#fake) .HyperMD-header-2 + :is(h2, h3, h4, h5, h6, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5, .HyperMD-header-6), :not(#fake) .HyperMD-header-3 + :is(h2, h3, h4, h5, h6, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5, .HyperMD-header-6), :not(#fake) .HyperMD-header-4 + :is(h2, h3, h4, h5, h6, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5, .HyperMD-header-6), :not(#fake) .HyperMD-header-5 + :is(h2, h3, h4, h5, h6, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5, .HyperMD-header-6), :not(#fake) .HyperMD-header-6 + :is(h2, h3, h4, h5, h6, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5, .HyperMD-header-6) {
   padding-top: 0;
 }
 
@@ -848,11 +850,29 @@ em, .cm-em {
   font-family: "Playfair Display", "Noto Serif JP";
 }
 
-.font-check {
+.check {
   font-family: var(--font-text-theme);
 }
-.font-check code {
+.check code {
   font-family: var(--font-monospace-theme);
+}
+.check h1 {
+  color: var(--h1-color);
+}
+.check h2 {
+  color: var(--h2-color);
+}
+.check h3 {
+  color: var(--h3-color);
+}
+.check h4 {
+  color: var(--h4-color);
+}
+.check h5 {
+  color: var(--h5-color);
+}
+.check h6 {
+  color: var(--h6-color);
 }
 
 /*# sourceMappingURL=style.css.map */

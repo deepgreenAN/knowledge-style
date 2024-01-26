@@ -55,6 +55,8 @@ body {
   --h2-color: #3bf357;
   --h3-color: #d2fb79;
   --h4-color: #dbc503;
+  --h5-color: #984705;
+  --h6-color: #8f8f8f;
 }
 
 // obsidian側の詳細度を無視するため，詳細度をfakeのid否定で底上げする．
@@ -72,9 +74,9 @@ body {
     padding-bottom: 0.4rem;
   }
 
-  h2, h3, h4, h5, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5 {
+  h2, h3, h4, h5, h6, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5, .HyperMD-header-6 {
     // 内容が無くそのまま連続する場合
-    & + :is(h2, h3, h4, h5, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5) {
+    & + :is(h2, h3, h4, h5, h6, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5, .HyperMD-header-6) {
       padding-top: 0;
     }
   }
@@ -89,10 +91,16 @@ em, .cm-em {
   font-family: 'Playfair Display', 'Noto Serif JP';
 }
 
-// fontのチェック
-.font-check {
+// チェック用クラス
+.check {
   font-family: var(--font-text-theme);
   code {
     font-family: var(--font-monospace-theme);
+  }
+
+  @for $i from 1 through 6 {
+    h#{$i} {
+      color: var(--h#{$i}-color);
+    }
   }
 }

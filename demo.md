@@ -73,15 +73,33 @@
 
 ### heading 1-2-2
 
-以下はフォントのチェック
+#### heading level 4
 
-<div class="font-check">
+##### heading level 5
+
+###### heading level 6
+
+以下はチェック用
+
+<div class="check">
   
   通常の文章．**強調された文章**．*斜体*, ~~訂正された文章~~
 
 ```rust
 println!("hello world!");
 ```
+
+# h1
+
+## h2
+
+### h3
+
+#### h4
+
+##### h5
+
+###### h6
 
 </div>
 
