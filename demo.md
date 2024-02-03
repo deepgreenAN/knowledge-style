@@ -124,7 +124,7 @@ println!("hello world!");
 <div>
 縦二段組リスト(列方向フロー)
 </div>
-<div class="list-col-2-col border" style="--row-number: 4;">
+<div class="list-col-3-col border" style="--row-number: 4;">
 
 - あああああああああああああああああ
 - b
@@ -133,21 +133,48 @@ println!("hello world!");
 - e
 - f
 - g
+- h
+- i
+- j
+- k
 
 </div>
 
 <div>
 縦二段組リスト(行方向フロー)
 </div>
-<div class="list-col-2-row border">
+<div class="list-col-3-row border">
 
-- あああああああああああああああああ
-- b
-- c
-- d
-- e
-- f
-- g
+<ul>
+  <li style="grid-column: 1 / 3">あああああああああああああ</li>
+  <li>b</li>
+  <li>c</li>
+  <li>d</li>
+  <li>e</li>
+  <li>f</li>
+  <li>g</li>
+  <li>h</li>
+  <li>i</li>
+</ul>
+
+</div>
+
+<div>
+縦二段組リスト(行方向フロー＋フレックス)
+</div>
+<div class="list-col-3-row-flex border">
+
+<ul>
+  <li style="--account-number:2;">あああああああああああああ</li>
+  <li>b</li>
+  <li>c</li>
+  <li style="--account-number:3;order:1;">いいいいいいいいいいいいいいいいいいいいいいいいいいいいいいい</li>
+  <li>e</li>
+  <li>f</li>
+  <li>g</li>
+  <li>h</li>
+  <li>i</li>
+</ul>
 
 </div>
 

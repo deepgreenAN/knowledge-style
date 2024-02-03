@@ -30,7 +30,7 @@
 // 縦n段組みリスト
 @mixin list-col-n($n) { // n: 列数
   // 列方向・行方向フローの共通部分
-  .list-col-#{$n}-col, .list-col-#{$n}-row {
+  .list-col-#{$n}-col, .list-col-#{$n}-row, .list-col-#{$n}-row-flex {
     // 中のulを中央にする．
     display: flex;
     justify-content: center;
@@ -40,18 +40,11 @@
     --row-gap: 0em;
     
     ul {
-      padding-left: 1.2em;
+      padding: 0;
       margin-top: 0;
       margin-bottom: 0;
+      margin-left: 1.2em;
       width: 100%;
-
-      display: grid;
-      grid-template-columns: repeat($n, 1fr);
-      row-gap: var(--row-gap);
-
-      li {
-        max-width: calc(100% - 1em); // マーカーサイズ分引く
-      }
     }
   }
 
@@ -61,15 +54,50 @@
     --row-number: 8;
 
     ul {
+      display: grid;
+      grid-template-columns: repeat($n, 1fr);
+      row-gap: var(--row-gap);
+
       grid-template-rows: repeat(var(--row-number), auto);
       grid-auto-flow: column;
+  
+      li {
+        max-width: calc(100% - 1em); // マーカーサイズ分引く
+      }
     }
   }
 
+
   // 縦n段組みリスト(行方向フロー)
   .list-col-#{$n}-row ul{
+    display: grid;
+    grid-template-columns: repeat($n, 1fr);
+    row-gap: var(--row-gap);
+
     grid-auto-rows: auto;
     grid-auto-flow: row;
+
+    li {
+      max-width: calc(100% - 1em); // マーカーサイズ分引く
+    }
+  }
+
+  // 縦n段組みリスト(行方向フロー＋フレックス)
+  .list-col-#{$n}-row-flex {
+    // 要素一つあたりの占有数
+    --account-number: 1;
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: var(--row-gap);
+
+      li {
+        width: calc(100% * var(--account-number) / $n);
+        padding-right: 1.2em;
+      }
+    }
   }
 }
 
@@ -91,9 +119,10 @@
     --column-gap: 0em;
 
     ul {
-      padding-left: 1.2em;
+      padding: 0;
       margin-top: 0;
       margin-bottom: 0;
+      margin-left: 1.2em;
       width: 100%;
 
       display: grid;
