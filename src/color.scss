@@ -38,3 +38,29 @@ $color-list: "red", "blue", "green", "yellow", "orange", "purple", "pink", "ligh
         border-color:  var(--cs-color-#{list.nth($color-list, $i)});
     }
 }
+
+// 各種色テーブルについて
+@for $i from 1 through list.length($color-list) {
+    .table-#{list.nth($color-list, $i)}  {
+        caption {
+            color: var(--cs-color-#{list.nth($color-list, $i)});   
+        }
+
+        th, td {
+            border-style: solid;
+            // マークダウン用のCSSの詳細度を無視する．
+            &:not(#fake) {
+            border-color: var(--cs-color-#{list.nth($color-list, $i)});
+            }
+        }
+        
+        th {
+            color: var(--cs-color-#{list.nth($color-list, $i)});
+            text-align: center;
+        }
+
+        tr:nth-child(odd) {
+            background-color: rgba(var(--cs-color-#{list.nth($color-list, $i)}-rgb), 0.2);
+        }
+    }
+}

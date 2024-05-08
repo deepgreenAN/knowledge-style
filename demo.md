@@ -207,3 +207,33 @@ println!("hello world!");
 - g
 
 </div>
+
+通常の表
+| 1          | 2 | 他より長い項目 | ほかよりかなりながいこうもく |
+|----------------|-------|---------------------|--------------------------------|
+| 15.6           | 十    | ああ          | 22.3                           |
+| 12.4           | 一    | ああ             |     あ    |
+| ここ | 五    | $e = mc^2$ | 12.6|
+
+<div>カスタム表</div>
+<table class="table-orange table-col-4 text-align-right font-small">
+  <caption class="font-xlarge">キャプション</caption>
+  <tr>
+    <th class="font-large">項目1</th>
+    <th class="font-large">項目2</th>
+    <th class="font-large">項目3</th>
+    <th class="font-large">項目4</th>
+  </tr>
+  <tr>
+    <td>1-1</td>
+    <td>2-1</td>
+    <td>3-1</td>
+    <td>4-1</td>
+  </tr>
+  <tr>
+    <td>1-2</td>
+    <td>2-2</td>
+    <td>3-2</td>
+    <td>4-2</td>
+  </tr>
+</table>

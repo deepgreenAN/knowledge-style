@@ -8,6 +8,9 @@
 .font-large {
   font-size: 1.2em;
 }
+.font-normal {
+  font-size: 1em;
+}
 .font-small {
   font-size: 0.8em;
 }
@@ -25,6 +28,35 @@
 .border {
   border-style: solid;
   border-radius: 5px;
+}
+
+// text-align関連
+.text-align-left {
+  text-align: left;
+
+  &table {
+    th, td {
+      text-align: left;
+    }
+  }
+}
+.text-align-right {
+  text-align: right;
+
+  &table {
+    th, td {
+      text-align: left;
+    }
+  }
+}
+.text-align-center {
+  text-align: center;
+
+  &table {
+    th, td {
+      text-align: left;
+    }
+  }
 }
 
 // 縦n段組みリスト
@@ -157,3 +189,14 @@
   @include list-row-n($i);
 } 
 
+// 等幅の表
+@for $i from 2 through 10 {
+  .table-col-#{$i} {
+    border-collapse: collapse;
+    width: 100%;
+
+    th, td {
+      width: calc(100% / $i);
+    }
+  }
+} 
