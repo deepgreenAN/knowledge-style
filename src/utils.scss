@@ -33,29 +33,28 @@
 // text-align関連
 .text-align-left {
   text-align: left;
-
-  &table {
-    th, td {
-      text-align: left;
-    }
+}
+table.text-align-left {
+  td {
+    text-align: left;
   }
 }
+
 .text-align-right {
   text-align: right;
-
-  &table {
-    th, td {
-      text-align: left;
-    }
+}
+table.text-align-right {
+  td {
+    text-align: right;
   }
 }
+
 .text-align-center {
   text-align: center;
-
-  &table {
-    th, td {
-      text-align: left;
-    }
+}
+table.text-align-center {
+  td {
+    text-align: center;
   }
 }
 
@@ -191,7 +190,7 @@
 
 // 等幅の表
 @for $i from 2 through 10 {
-  .table-col-#{$i} {
+  table.table-col-#{$i} {
     border-collapse: collapse;
     width: 100%;
 

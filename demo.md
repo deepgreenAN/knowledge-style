@@ -71,7 +71,15 @@
 
 #### heading 1-2-1-2
 
+#### heading 1-2-1-3
+
 ### heading 1-2-2
+
+### heading 1-2-3
+
+#### heading 1-2-3-1
+
+#### heading 1-2-3-2
 
 #### heading level 4
 
@@ -226,7 +234,7 @@ println!("hello world!");
   </tr>
   <tr>
     <td>1-1</td>
-    <td>2-1</td>
+    <td><div>2-1</div><div>2-1</div></td>
     <td>3-1</td>
     <td>4-1</td>
   </tr>

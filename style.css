@@ -205,7 +205,7 @@
   color: var(--cs-color-red);
   text-align: center;
 }
-.table-red tr:nth-child(odd) {
+.table-red tr:nth-child(odd):not(#fake) {
   background-color: rgba(var(--cs-color-red-rgb), 0.2);
 }
 
@@ -222,7 +222,7 @@
   color: var(--cs-color-blue);
   text-align: center;
 }
-.table-blue tr:nth-child(odd) {
+.table-blue tr:nth-child(odd):not(#fake) {
   background-color: rgba(var(--cs-color-blue-rgb), 0.2);
 }
 
@@ -239,7 +239,7 @@
   color: var(--cs-color-green);
   text-align: center;
 }
-.table-green tr:nth-child(odd) {
+.table-green tr:nth-child(odd):not(#fake) {
   background-color: rgba(var(--cs-color-green-rgb), 0.2);
 }
 
@@ -256,7 +256,7 @@
   color: var(--cs-color-yellow);
   text-align: center;
 }
-.table-yellow tr:nth-child(odd) {
+.table-yellow tr:nth-child(odd):not(#fake) {
   background-color: rgba(var(--cs-color-yellow-rgb), 0.2);
 }
 
@@ -273,7 +273,7 @@
   color: var(--cs-color-orange);
   text-align: center;
 }
-.table-orange tr:nth-child(odd) {
+.table-orange tr:nth-child(odd):not(#fake) {
   background-color: rgba(var(--cs-color-orange-rgb), 0.2);
 }
 
@@ -290,7 +290,7 @@
   color: var(--cs-color-purple);
   text-align: center;
 }
-.table-purple tr:nth-child(odd) {
+.table-purple tr:nth-child(odd):not(#fake) {
   background-color: rgba(var(--cs-color-purple-rgb), 0.2);
 }
 
@@ -307,7 +307,7 @@
   color: var(--cs-color-pink);
   text-align: center;
 }
-.table-pink tr:nth-child(odd) {
+.table-pink tr:nth-child(odd):not(#fake) {
   background-color: rgba(var(--cs-color-pink-rgb), 0.2);
 }
 
@@ -324,7 +324,7 @@
   color: var(--cs-color-light-blue);
   text-align: center;
 }
-.table-light-blue tr:nth-child(odd) {
+.table-light-blue tr:nth-child(odd):not(#fake) {
   background-color: rgba(var(--cs-color-light-blue-rgb), 0.2);
 }
 
@@ -341,7 +341,7 @@
   color: var(--cs-color-light-green);
   text-align: center;
 }
-.table-light-green tr:nth-child(odd) {
+.table-light-green tr:nth-child(odd):not(#fake) {
   background-color: rgba(var(--cs-color-light-green-rgb), 0.2);
 }
 
@@ -476,22 +476,25 @@ body {
 .text-align-left {
   text-align: left;
 }
-.text-align-lefttable th, .text-align-lefttable td {
+
+table.text-align-left td {
   text-align: left;
 }
 
 .text-align-right {
   text-align: right;
 }
-.text-align-righttable th, .text-align-righttable td {
-  text-align: left;
+
+table.text-align-right td {
+  text-align: right;
 }
 
 .text-align-center {
   text-align: center;
 }
-.text-align-centertable th, .text-align-centertable td {
-  text-align: left;
+
+table.text-align-center td {
+  text-align: center;
 }
 
 .list-col-2-col, .list-col-2-row, .list-col-2-row-flex {
@@ -1056,75 +1059,75 @@ body {
   grid-auto-flow: column;
 }
 
-.table-col-2 {
+table.table-col-2 {
   border-collapse: collapse;
   width: 100%;
 }
-.table-col-2 th, .table-col-2 td {
+table.table-col-2 th, table.table-col-2 td {
   width: 50%;
 }
 
-.table-col-3 {
+table.table-col-3 {
   border-collapse: collapse;
   width: 100%;
 }
-.table-col-3 th, .table-col-3 td {
+table.table-col-3 th, table.table-col-3 td {
   width: 33.3333333333%;
 }
 
-.table-col-4 {
+table.table-col-4 {
   border-collapse: collapse;
   width: 100%;
 }
-.table-col-4 th, .table-col-4 td {
+table.table-col-4 th, table.table-col-4 td {
   width: 25%;
 }
 
-.table-col-5 {
+table.table-col-5 {
   border-collapse: collapse;
   width: 100%;
 }
-.table-col-5 th, .table-col-5 td {
+table.table-col-5 th, table.table-col-5 td {
   width: 20%;
 }
 
-.table-col-6 {
+table.table-col-6 {
   border-collapse: collapse;
   width: 100%;
 }
-.table-col-6 th, .table-col-6 td {
+table.table-col-6 th, table.table-col-6 td {
   width: 16.6666666667%;
 }
 
-.table-col-7 {
+table.table-col-7 {
   border-collapse: collapse;
   width: 100%;
 }
-.table-col-7 th, .table-col-7 td {
+table.table-col-7 th, table.table-col-7 td {
   width: 14.2857142857%;
 }
 
-.table-col-8 {
+table.table-col-8 {
   border-collapse: collapse;
   width: 100%;
 }
-.table-col-8 th, .table-col-8 td {
+table.table-col-8 th, table.table-col-8 td {
   width: 12.5%;
 }
 
-.table-col-9 {
+table.table-col-9 {
   border-collapse: collapse;
   width: 100%;
 }
-.table-col-9 th, .table-col-9 td {
+table.table-col-9 th, table.table-col-9 td {
   width: 11.1111111111%;
 }
 
-.table-col-10 {
+table.table-col-10 {
   border-collapse: collapse;
   width: 100%;
 }
-.table-col-10 th, .table-col-10 td {
+table.table-col-10 th, table.table-col-10 td {
   width: 10%;
 }
 

@@ -42,6 +42,9 @@
   --cs-secondary-color: #fcaf21;
   --cs-secondary-color-rgb: 252, 175, 33;
 
+  // 章番号
+  // --cs-section-marker-display: none; // none or inline
+
   // 既存のcss変数の変更
 }
 
@@ -90,6 +93,33 @@ strong, .cm-strong {
 em, .cm-em {
   font-family: 'Playfair Display', 'Noto Serif JP';
 }
+// 章番号
+// body {
+//   counter-reset: cs-counter-section-h2;
+// }
+// h2, .HyperMD-header-2 {
+//   counter-reset: cs-counter-section-h3 cs-counter-section-h4;
+//   counter-increment: cs-counter-section-h2;
+//   &::before {
+//     content: counter(cs-counter-section-h2) " ";
+//     display: var(--cs-section-marker-display);
+//   }
+// }
+// h3, .HyperMD-header-3 {
+//   counter-reset: cs-counter-section-h4;
+//   counter-increment: cs-counter-section-h3;
+//   &::before {
+//     content: counter(cs-counter-section-h2) "." counter(cs-counter-section-h3) " ";
+//     display: var(--cs-section-marker-display);
+//   }
+// }
+// h4, .HyperMD-header-4 {
+//   counter-increment: cs-counter-section-h4;
+//   &::before {
+//     content: counter(cs-counter-section-h2) "." counter(cs-counter-section-h3) "." counter(cs-counter-section-h4) " ";
+//     display: var(--cs-section-marker-display);
+//   }
+// }
 
 // チェック用クラス
 .check {

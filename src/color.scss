@@ -48,9 +48,9 @@ $color-list: "red", "blue", "green", "yellow", "orange", "purple", "pink", "ligh
 
         th, td {
             border-style: solid;
-            // マークダウン用のCSSの詳細度を無視する．
+            // 詳細度を無視する
             &:not(#fake) {
-            border-color: var(--cs-color-#{list.nth($color-list, $i)});
+                border-color: var(--cs-color-#{list.nth($color-list, $i)});
             }
         }
         
@@ -60,7 +60,11 @@ $color-list: "red", "blue", "green", "yellow", "orange", "purple", "pink", "ligh
         }
 
         tr:nth-child(odd) {
-            background-color: rgba(var(--cs-color-#{list.nth($color-list, $i)}-rgb), 0.2);
+            // 詳細度を無視する
+            &:not(#fake) {
+                background-color: rgba(var(--cs-color-#{list.nth($color-list, $i)}-rgb), 0.2);  
+            }
+            // background-color: rgba(var(--cs-color-#{list.nth($color-list, $i)}-rgb), 0.2);
         }
     }
 }
